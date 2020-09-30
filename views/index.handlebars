@@ -5,7 +5,15 @@
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burgers-block devoure = true}}
+      <li>
+	{{burger_name}}
+
+	<button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
+		Devour!
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>
     {{/unless}}
   {{/each}}
 </ul>
@@ -15,7 +23,12 @@
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burgers-block devoure= false}}
+      
+      <li>
+	{{burger_name}}
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+</li>
     {{/if}}
   {{/each}}
 </ul>
@@ -26,10 +39,6 @@
   <div class="form-group">
     <label for="burger">Burger Name:</label>
     <input type="text" id="burgerName" name="burgerName">
-  </div>
-
-  <div class="form-group">
-    <label for="devoured">devoured?</label><br>
   </div>
 
   <button type="submit">Add Burger</button>

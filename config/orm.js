@@ -23,6 +23,7 @@ function printQuestionMarks(num) {
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
+       
         arr.push(key + "=" + value);
       }
     }
