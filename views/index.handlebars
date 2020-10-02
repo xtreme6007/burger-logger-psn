@@ -1,8 +1,12 @@
-<h1>Burgers!</h1>
 
+
+<h1 class="text-center">Burgers!</h1>
+<div class="container main">
+  <div class = "row">
+<div class="col-6" id ="onhold">
 <h2>Burgers on hold!</h2>
 
-<ul>
+<ul class="holdBurg">
   {{#each burgers}}
     {{#unless devoured}}
       <li>
@@ -17,8 +21,9 @@
     {{/unless}}
   {{/each}}
 </ul>
-
-<h2>burgers that are devoured!</h2>
+</div>
+<div class="col-6">
+<h2>Burgers that are devoured!</h2>
 
 <ul>
   {{#each burgers}}
@@ -32,15 +37,32 @@
     {{/if}}
   {{/each}}
 </ul>
+</div>
+</div>
+</div>
 
 <h2>Add a burger</h2>
-<form class="create-form">
+<form class="burger-form">
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burgerName" name="burgerName">
-  </div>
-
+    <label for="newBurger">Burger Name:</label>
+    <input type="text" id="newBurger" name="newBurger">
+  <br>
   <button type="submit">Add Burger</button>
 </form>
+
+
+<div class="box">
+<div class="bread-top">
+<div class="seed"></div>
+<div class="seed2"></div>
+</div>
+<div class="salad"></div>
+<div class="bacon"></div>
+<div class="cheese"></div>
+<div class="meat"></div>
+<div class="bread-bottom"></div>
+
+
+
+</div>
 
