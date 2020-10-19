@@ -1,7 +1,3 @@
-
-
-
-
 $(function() {
     // change devoured to true
   $(".change-devoured").on("click", function(event) {
